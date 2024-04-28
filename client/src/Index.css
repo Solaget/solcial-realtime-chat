@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fff;
+    --foreground: hsl(224 71.4% 4.1%);
+
+    --surface: #ffe;
+    --surface-foreground: hsl(224 71.4% 4.1%);
+
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(224 71.4% 4.1%);
+
+    --popover: hsl(0, 0%, 83%);
+    --popover-foreground: hsl(224 71.4% 4.1%);
+
+    --primary: #1a73e8;
+    --primary-foreground: #ffff;
+
+    --secondary: #d4d4d4;
+    --secondary-foreground: hsl(0, 0%, 2%);
+
+    --muted: hsl(220 14.3% 95.9%);
+    --muted-foreground: hsl(220 8.9% 46.1%);
+
+    --accent: hsl(220 14.3% 95.9%);
+    --accent-foreground: hsl(220.9 39.3% 11%);
+
+    --destructive: hsl(214, 89%, 68%);
+    --destructive-foreground: hsl(0, 0%, 100%);
+
+    --invert: #000;
+    --invert-foreground: hsl(0, 0%, 100%);
+
+    --border: hsl(220 13% 91%);
+    --input: hsl(220 13% 91%);
+    --ring: hsl(224 71.4% 4.1%);
+
+    --radius: 0.5rem;
+
+    --warning: hsl(38 92% 50%);
+    --warning-foreground: hsl(48 96% 89%);
+
+    --avatar-fallback-bg: rgb(92, 62, 121);
+    --avatar-fallback-bg-one: rgb(170, 58, 58);
+    --avatar-fallback-bg-two: rgb(89, 89, 196);
+    --avatar-fallback-bg-three: rgb(54, 127, 54);
+    --avatar-fallback-bg-four: rgb(135, 43, 43);
+  }
+
+  .dark {
+    --background: hsl(224 71.4% 4.1%);
+    --foreground: hsl(210 20% 98%);
+
+    --surface: #000;
+    --surface-foreground: hsl(0, 0%, 100%);
+
+    --card: hsl(224 71.4% 4.1%);
+    --card-foreground: hsl(210 20% 98%);
+
+    --popover: hsl(224 71.4% 4.1%);
+    --popover-foreground: hsl(210 20% 98%);
+
+    --primary: #1a73e8;
+    --primary-foreground: hsl(0, 0%, 100%);
+
+    --secondary: #232523;
+    --secondary-foreground: hsl(0, 0%, 100%);
+
+    --muted: hsl(215 27.9% 16.9%);
+    --muted-foreground: hsl(217.9 10.6% 64.9%);
+
+    --accent: hsl(215 27.9% 16.9%);
+    --accent-foreground: hsl(210 20% 98%);
+
+    --destructive: hsl(214, 82%, 51%);
+    --destructive-foreground: hsl(0, 0%, 100%);
+
+    --invert: #fff;
+    --invert-foreground: #000;
+
+    --border: hsl(215 27.9% 16.9%);
+    --input: hsl(215 27.9% 16.9%);
+    --ring: hsl(216 12.2% 83.9%);
+
+    --warning: hsl(48 96% 89%);
+    --warning-foreground: hsl(38 92% 50%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-surface text-foreground;
+  }
+}
+
+/* Customr Styles 👇🏼 */
+.page-navigator.active {
+  @apply bg-background;
+}
+
+.page-navigator.active svg {
+  @apply text-primary;
+}
+
+.setting-nav-link.active {
+  @apply bg-muted text-foreground transition;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+}
+
+html.light {
+  ::-webkit-scrollbar-thumb {
+    @apply bg-black/50;
+  }
+}
+
+html.dark {
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-50/50;
+  }
+}
+.underlined {
+  position: relative;
+  margin-right: 1rem;
+}
+.underlined::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  border: solid 2px;
+  border-color: #5395ff transparent transparent transparent;
+  border-radius: 100%;
+  rotate: -1deg;
+}
+.chat-focus-indicator {
+  animation: chatfocusindicator 0.5s;
+}
+.transition-bg-none {
+  transition: filter 0s;
+  transition: background-color 0s;
+}
+.transtion-1 {
+  transition: 0.1s;
+}
+@keyframes chatfocusindicator {
+  0% {
+    transform: translateX(-35px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.animate-to-right{
+  animation: .25s animate_to_right;
+}
+
+@keyframes animate_to_right {
+  0%{
+    transform: translateX(50px)
+  }
+  100%{
+    transform: translateX(0px)
+  }
+}
+@layer {
+  .replied-msg-hint {
+    @apply animate-pulse;
+  }
+}

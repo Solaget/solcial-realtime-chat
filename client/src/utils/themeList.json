@@ -1,0 +1,14 @@
+[
+  {
+    "name": "dark",
+    "cover": "/images/dark.svg"
+  },
+  {
+    "name": "light",
+    "cover": "/images/light.svg"
+  },
+  {
+    "name": "system",
+    "cover": "/images/default.svg"
+  }
+]
