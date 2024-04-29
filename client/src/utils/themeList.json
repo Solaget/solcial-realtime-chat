@@ -1,14 +1,14 @@
 [
   {
     "name": "dark",
-    "cover": "/images/dark.svg"
+    "cover": "/images/theme/dark.svg"
   },
   {
     "name": "light",
-    "cover": "/images/light.svg"
+    "cover": "/images/theme/light.svg"
   },
   {
     "name": "system",
-    "cover": "/images/default.svg"
+    "cover": "/images/theme/default.svg"
   }
 ]

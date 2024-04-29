@@ -1,0 +1,15 @@
+<svg width="88" height="56" viewBox="0 0 88 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="87" height="55" rx="7.5" fill="#303134"/>
+<rect x="0.5" y="0.5" width="87" height="55" rx="7.5" stroke="#5F6368"/>
+<path d="M0 8C0 3.58172 3.58172 0 8 0H44V56H8C3.58172 56 0 52.4183 0 48V8Z" fill="white"/>
+<path d="M44 0H45V-1H44V0ZM44 56V57H45V56H44ZM8 1H44V-1H8V1ZM43 0V56H45V0H43ZM44 55H8V57H44V55ZM1 48V8H-1V48H1ZM8 55C4.13401 55 1 51.866 1 48H-1C-1 52.9706 3.02944 57 8 57V55ZM8 -1C3.02944 -1 -1 3.02944 -1 8H1C1 4.13401 4.13401 1 8 1V-1Z" fill="#DFE1E5"/>
+<rect x="8" y="8" width="10" height="11" rx="4" fill="#80868B"/>
+<rect x="21" y="12" width="52" height="4" rx="2" fill="#BDC1C6"/>
+<path d="M44 12H71C72.1046 12 73 12.8954 73 14V14C73 15.1046 72.1046 16 71 16H44V12Z" fill="#DADCE0"/>
+<rect x="8" y="32" width="72" height="5" rx="2.5" fill="#DADCE0"/>
+<rect x="8" y="42" width="51" height="5" rx="2.5" fill="#DADCE0"/>
+<rect x="8" y="23" width="72" height="5" rx="2.5" fill="#8AB4F8"/>
+<path d="M8 25.5C8 24.1193 9.11929 23 10.5 23H44V28H10.5C9.11929 28 8 26.8807 8 25.5V25.5Z" fill="#1558D6"/>
+<path d="M8 34.5C8 33.1193 9.11929 32 10.5 32H44V37H10.5C9.11929 37 8 35.8807 8 34.5V34.5Z" fill="#BDC1C6"/>
+<path d="M8 44.5C8 43.1193 9.11929 42 10.5 42H44V47H10.5C9.11929 47 8 45.8807 8 44.5V44.5Z" fill="#BDC1C6"/>
+</svg>
