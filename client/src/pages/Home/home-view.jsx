@@ -15,7 +15,7 @@ const HomeView = () => {
   };
 
   const handleGoToGithub = () => {
-    window.open('https://github.com/Solaget')
+    window.open("https://github.com/Solaget");
   };
 
   return (
@@ -29,9 +29,10 @@ const HomeView = () => {
               <span className="underlined">freinds</span>
             </h3>
             <p className="text-lg text-muted-foreground px-4 w-[90%] sm:w-[60%]">
-              Chat App lets you connect with the world Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Architecto pariatur quod labore
-              quo soluta rem alias ut nihil. Quis porro aut facilis reiciendis
+              Chat App lets you connect with the world Solcial is more than just
+              a chat app—it's a platform designed to cater to all your
+              communication needs. With a plethora of features, Solcial offers a
+              comprehensive and seamless chatting experience like no other.
             </p>
           </div>
 
