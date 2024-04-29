@@ -55,7 +55,7 @@ const Login = () => {
 
   const handleLoginAsGuest = async () => {
     setAsAGusetIsLoading(true);
-    await loginUser({ email: "guest@gmail.com", password: "1111" });
+    await loginUser({ email: "guest@gmail.com", password: "0011223344" });
     await fetchAccount();
     setAsAGusetIsLoading(false);
   };
