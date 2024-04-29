@@ -18,8 +18,11 @@ import { useSendMessageMutation } from "@/api/services/message.service";
 import { ChatContext } from "@/context/chat-provider";
 // Socket
 import { socket } from "@/App";
+// Hooks
+import { useToast } from "@/hooks/use-toast";
 
 const FileSelector = () => {
+  const { toast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
   const {
     currentChat,
@@ -62,13 +65,19 @@ const FileSelector = () => {
     }
 
     try {
-      const res = await sendMessage(formData);
+      const data = await sendMessage(formData).unwrap();
+
       clearHistory();
       setIsOpen(false);
       setToReplyMessage(null);
-      setMessages([...messages, res.data]);
-      socket && socket.emit("send message", res.data);
-    } catch (error) {}
+      setMessages([...messages, data]);
+      socket && socket.emit("send message", data);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Message not send for yet, Please Try again later!",
+      });
+    }
   };
 
   useEffect(() => {

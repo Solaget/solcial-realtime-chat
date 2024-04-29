@@ -49,22 +49,19 @@ const ConversationFooter = () => {
     }
 
     try {
-      const res = await sendMessage(payload);
-      if (res.data) {
-        setMessageInputValue("");
-        setToReplyMessage(null);
-        socket && socket.emit("send message", res.data);
-        setMessages([...messages, res.data]);
-        conversationContainerRef.current.scrollTop =
-          conversationContainerRef.current.scrollHeight;
-      } else {
-        toast({
-          title: "Error",
-          description: "Try again later",
-        });
-      }
+      const data = await sendMessage(payload).unwrap();
+      setMessageInputValue("");
+      setToReplyMessage(null);
+      socket && socket.emit("send message", data);
+      setMessages([...messages, data]);
+
+      conversationContainerRef.current.scrollTop =
+        conversationContainerRef.current.scrollHeight;
     } catch (error) {
-      console.log(error);
+      toast({
+        title: "Error",
+        description: "Try again later",
+      });
     }
   };
 

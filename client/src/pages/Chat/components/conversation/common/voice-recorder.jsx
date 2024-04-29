@@ -15,9 +15,12 @@ import { useSendMessageMutation } from "@/api/services/message.service";
 import { ChatContext } from "@/context/chat-provider";
 // Socket
 import { socket } from "@/App";
+// Hooks
+import { useToast } from "@/hooks/use-toast";
 
 const VoiceRecorder = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { toast } = useToast();
   const {
     currentChat,
     setMessages,
@@ -77,13 +80,18 @@ const VoiceRecorder = () => {
       formData.append("repliedMessage", toReplyMessage._id);
     }
     try {
-      const res = await sendMessage(formData);
+      const data = await sendMessage(formData).unwrap();
       setIsOpen(false);
       setToReplyMessage(null);
       clearHistory();
-      setMessages([...messages, res.data]);
-      socket && socket.emit("send message", res.data);
-    } catch (error) {}
+      setMessages([...messages, data]);
+      socket && socket.emit("send message", data);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Message not send for yet, Please Try again later!",
+      });
+    }
   };
 
   return (
