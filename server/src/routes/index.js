@@ -9,6 +9,10 @@ import contactRoutes from "./contact.routes.js";
 
 const router = Router();
 
+router.get("/", (req, res) => {
+  res.send("server is running");
+});
+
 router.use("/auth", authRouter);
 router.use("/account", accountRouter);
 router.use("/profile", profileRouter);
