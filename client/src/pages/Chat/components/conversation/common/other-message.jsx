@@ -107,9 +107,9 @@ const OtherMessage = ({ message }) => {
           >
             <h4 className="text-[10px] opacity-65 leading-none">
               {isGroupAdmin(currentChat, message.sender._id) &&
-              !isGroupOwner(currentChat, message.sender._id)
-                ? "Admin"
-                : "owner"}
+                !isGroupOwner(currentChat, message.sender._id) &&
+                "Admin"}
+              {isGroupOwner(currentChat, message.sender._id) && "owner"}
             </h4>
             <h4 className="text-[10px] opacity-65 leading-none">
               {timeFormatter(message.createdAt)}

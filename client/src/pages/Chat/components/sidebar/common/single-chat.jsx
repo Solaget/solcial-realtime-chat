@@ -71,34 +71,37 @@ const SingleChat = ({ data: chat }) => {
                   )}
                   <h3 className="line-clamp-1">{displayChatInfo.fullName}</h3>
                 </div>
-                {chat?.latestMessage ? (
-                  <>
-                    {chat.latestMessage.media &&
-                      (chat?.latestMessage.media.type === "image" ? (
-                        <h3 className="text-xs opacity-70">Voice Message</h3>
-                      ) : (
-                        <div className="flex gap-1 items-center">
-                          <img
-                            src={
-                              import.meta.env.VITE_MESSAGE_MEDIA_URL +
-                              chat?.latestMessage?.media?.url
-                            }
-                            className="max-h-[25px] max-w-[35px] mt-1"
-                          />
-                        </div>
-                      ))}
 
-                    {chat.latestMessage.content && (
-                      <span className="text-xs text-muted-foreground leading-none line-clamp-2">
-                        {chat.latestMessage.content}
-                      </span>
-                    )}
-                  </>
-                ) : (
-                  <span className="text-xs text-muted-foreground leading-none line-clamp-2">
-                    No message yet!
-                  </span>
-                )}
+                <div className="flex gap-1 items-center">
+                  {chat?.latestMessage ? (
+                    <>
+                      {chat.latestMessage.media &&
+                        (chat?.latestMessage.media.type === "audio" ? (
+                          <h3 className="text-xs opacity-70">Voice Message</h3>
+                        ) : (
+                          <div className="flex gap-1 items-center">
+                            <img
+                              src={
+                                import.meta.env.VITE_MESSAGE_MEDIA_URL +
+                                chat?.latestMessage?.media?.url
+                              }
+                              className="max-h-[25px] max-w-[35px] mt-1"
+                            />
+                          </div>
+                        ))}
+
+                      {chat.latestMessage.content && (
+                        <span className="text-xs text-muted-foreground leading-none line-clamp-2">
+                          {chat.latestMessage.content}
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    <span className="text-xs text-muted-foreground leading-none line-clamp-2">
+                      No message yet!
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="flex flex-col gap-3 items-end">
