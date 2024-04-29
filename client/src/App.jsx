@@ -1,6 +1,6 @@
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 // Css/Style 👇🏼
-import "./index.css";
+// import "./index.css";
 import "@/components/ui/style/Style.css";
 // Lib 👇🏼
 import Cookie from "js-cookie";
