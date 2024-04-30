@@ -6,7 +6,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 
 // Importing All Pages Using Lazy Loader for good performance 👇🏼
 const Signup = lazy(() => import("@/pages/Signup/signup-page"));
-const HomePage = lazy(() => import("@/pages/home/home-page"));
+const HomePage = lazy(() => import("@/pages/Home/home-page"));
 const Login = lazy(() => import("@/pages/Login/login-page"));
 const ChatPage = lazy(() => import("@/pages/Chat/chat-page"));
 const ThemePage = lazy(() => import("@/pages/Theme/theme-page"));
