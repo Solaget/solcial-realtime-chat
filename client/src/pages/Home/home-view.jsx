@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 // Components 👇🏼
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 // Icons
 import { FaGithub } from "react-icons/fa";
 
