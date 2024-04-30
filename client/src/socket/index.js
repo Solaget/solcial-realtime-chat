@@ -6,7 +6,7 @@ const setupSocket = (token, setSocketIsConnected) => {
   socket.emit("online");
   socket.on("connect", () => {
     setSocketIsConnected(true);
-    // console.log("Socket.io connect successfully");
+    console.log("Socket.io connect successfully");
   });
 
   return socket;

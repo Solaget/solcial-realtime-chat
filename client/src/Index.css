@@ -121,7 +121,7 @@
   cursor: pointer;
 }
 
-html.light {
+/* html.light {
   ::-webkit-scrollbar-thumb {
     @apply bg-black/50;
   }
@@ -131,7 +131,7 @@ html.dark {
   ::-webkit-scrollbar-thumb {
     @apply bg-slate-50/50;
   }
-}
+} */
 .underlined {
   position: relative;
   margin-right: 1rem;
