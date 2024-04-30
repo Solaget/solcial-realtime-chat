@@ -6,7 +6,8 @@ const api = createApi({
   refetchOnMountOrArgChange: true,
   tagTypes: ["FetchAllChats"],
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_SERVER_URL,
+    // baseUrl: import.meta.env.VITE_SERVER_URL,
+    baseUrl: "http://localhost:8080",
     credentials: "include",
   }),
   endpoints: (builder) => ({}),

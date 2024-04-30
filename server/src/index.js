@@ -15,7 +15,7 @@ app.use(express.static("public"));
 const server = http.createServer(app);
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://solcial-realtime-chat.vercel.app",
     credentials: true,
   })
 );
