@@ -6,7 +6,7 @@ import { useLoginMutation } from "@/api/services/auth.service";
 import { useLazyFetchCurrentAccountQuery } from "@/api/services/account.service";
 // Components 👇🏼
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ModeToggle } from "@/components/common/mode-toggle";
 import {
